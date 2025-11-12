@@ -6,10 +6,13 @@
     <title>CodeForge - Desenvolvimento Web Criativo & Profissional</title>
     <meta name="description" content="Criando experiências web além da imanigação. Desenvolvimento web criativo e profissional com as melhores tecnologias." data-react-helmet="true">
 
+    <!-- Estilo Principal: Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- CSS para Efeitos de Entrada (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
+    <!-- CSS Personalizado: Animações e Controle de Scrollbar -->
     <link rel="stylesheet" href="styles.css">
     
 </head>
@@ -17,6 +20,7 @@
     <div id="root">
         <div class="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 text-white overflow-x-hidden">
             
+            <!-- HEADER / NAVEGAÇÃO -->
             <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-cyan-500/20">
                 <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-2 cursor-pointer">
@@ -52,6 +56,7 @@
                         </div>
                     </div>
                     <div class="relative">
+                        <!-- EFEITO ATUALIZADO: Fundo para Frente (zoom-in) -->
                         <div class="relative bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-3xl p-8 backdrop-blur-sm border border-cyan-500/30 shadow-2xl shadow-cyan-500/20" data-aos="zoom-in" data-aos-delay="300">
                             <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full opacity-50 blur-xl"></div>
                             <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full opacity-50 blur-xl"></div>
@@ -209,9 +214,12 @@
                         <p class="text-xl text-gray-300">Pronto para transformar suas ideias em realidade?</p>
                     </div>
                     <div class="bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-3xl p-8 md:p-12 border border-cyan-500/20 backdrop-blur-sm">
+                        <!-- FORMULÁRIO FUNCIONAL CONFIGURADO PARA rafaelsoaresgw@gmail.com -->
                         <form class="space-y-6" action="https://formsubmit.co/rafaelsoaresgw@gmail.com" method="POST">
                             
-                            <input type="hidden" name="_next" value="URL DA SUA PÁGINA INICIAL APÓS O ENVIO">
+                            <!-- Campos ocultos necessários para Formsubmit -->
+                            <!-- REDIRECIONAMENTO PARA O SEU SITE COM PARAMETRO DE SUCESSO -->
+                            <input type="hidden" name="_next" value="https://rafaelsoaresgw.github.io/potfolio_1/?success=true">
                             <input type="hidden" name="_captcha" value="false">
                             
                             <div class="grid md:grid-cols-2 gap-6">
@@ -244,12 +252,27 @@
         </div>
     </div>
 
+    <!-- Script do AOS e Inicialização -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
         duration: 1000, 
         once: true,    
       });
+    </script>
+
+    <!-- CÓDIGO FINAL: Alerta de Sucesso -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const successParam = urlParams.get('success');
+
+        if (successParam === 'true') {
+            // Exibe a mensagem de sucesso
+            alert("Mensagem enviada com sucesso! Logo entrarei em contato.");
+            
+            // Remove o parâmetro da URL para não mostrar o alerta novamente se o usuário recarregar
+            history.replaceState(null, null, window.location.pathname);
+        }
     </script>
 </body>
 </html>
