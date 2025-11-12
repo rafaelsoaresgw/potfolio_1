@@ -63,3 +63,33 @@ body {
 .min-h-screen {
     overflow: hidden; 
 }
+
+
+/* 4. EFEITO DE CURSOR PISCANDO */
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.blinking-cursor {
+    font-weight: bold;
+    color: white; /* Garante que o cursor seja branco */
+    animation: blink 1s step-end infinite;
+}
+
+/* 5. EFEITO DE FUNDO EMBASSADO (BACKDROP BLUR) PARA O MENU LATERAL */
+
+/* Efeito de fundo embaçado para o body quando o menu lateral está aberto */
+body.backdrop-blur-overlay::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente */
+    backdrop-filter: blur(8px); /* Nível de embaçamento */
+    z-index: 40; /* Deve ser menor que o z-index do sidebar (z-50) */
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+}
