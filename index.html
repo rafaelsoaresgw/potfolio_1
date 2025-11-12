@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeForge - Desenvolvimento Web Criativo & Profissional</title>
+    <title>RSO DIGITAL - Desenvolvimento Web Criativo & Profissional</title>
     <meta name="description" content="Criando experiências web além da imanigação. Desenvolvimento web criativo e profissional com as melhores tecnologias." data-react-helmet="true">
 
-    <!-- 1. Estilo Principal: Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- 2. CSS para Efeitos de Entrada (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- 3. CSS Personalizado: Animações de Rotação/Pulso (e Scrollbar invisível) -->
     <link rel="stylesheet" href="styles.css">
     
 </head>
@@ -20,29 +17,42 @@
     <div id="root">
         <div class="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-purple-950 text-white overflow-x-hidden">
             
-            <!-- HEADER / NAVEGAÇÃO -->
             <header class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-cyan-500/20">
                 <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
                     <div class="flex items-center gap-2 cursor-pointer">
                         <div class="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
-                            <span class="text-white font-bold text-xl">C</span>
+                            <span class="text-white font-bold text-xl">R</span>
                         </div>
-                        <span class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">CODEFORGE</span>
+                        <span class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">RSO DIGITAL</span>
                     </div>
                     <div class="hidden md:flex items-center gap-8">
-                        <!-- LINKS DE NAVEGAÇÃO COM ROLAGEM SUAVE -->
                         <a href="#hero" class="hover:text-cyan-400 transition-colors nav-link">HOME</a>
                         <a href="#portfolio" class="hover:text-cyan-400 transition-colors nav-link">PORTFOLIO</a>
                         <a href="#services" class="hover:text-cyan-400 transition-colors nav-link">SERVICES</a>
                         <a href="#contact" class="hover:text-cyan-400 transition-colors nav-link">ABOUT</a>
-                        <!-- BOTÃO HIRE ME APONTA PARA CONTATO -->
                         <a href="#contact" class="inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold nav-link">HIRE ME</a>
                     </div>
-                    <button class="md:hidden text-cyan-400">
+                    <button id="menu-toggle" class="md:hidden text-cyan-400">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
                     </button>
                 </nav>
             </header>
+
+            <aside id="sidebar" class="fixed top-0 right-0 h-full w-64 bg-slate-900/90 backdrop-blur-xl border-l border-cyan-500/20 z-50 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+                <div class="p-4 flex items-center justify-end border-b border-cyan-500/20">
+                    <button id="close-menu" class="text-cyan-400 hover:text-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+                    </button>
+                </div>
+                <nav class="flex flex-col p-4 gap-4 h-full">
+                    <a href="#hero" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">HOME</a>
+                    <a href="#portfolio" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">PORTFOLIO</a>
+                    <a href="#services" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">SERVICES</a>
+                    <a href="#contact" class="text-white text-lg font-semibold hover:text-cyan-400 transition-colors block py-2 nav-link-sidebar">ABOUT</a>
+                    <a href="#contact" class="inline-flex items-center justify-center ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold mt-auto nav-link-sidebar">HIRE ME</a>
+                </nav>
+            </aside>
+
 
             <section id="hero" class="min-h-screen flex items-center justify-center pt-20 px-4 relative overflow-hidden">
                 <div class="absolute inset-0 opacity-30">
@@ -54,12 +64,10 @@
                         <h1 class="text-5xl md:text-6xl font-bold leading-tight">CRIANDO EXPERIÊNCIAS WEB <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">ALÉM DA IMANIGAÇÃO</span></h1>
                         <p class="text-xl text-gray-300">Desenvolvimento Web Criativo &amp; Profissional</p>
                         <div>
-                            <!-- LINK VAMOS CRIAR JUNTOS AGORA APONTA PARA O NOVO LINK DO WHATSAPP -->
                             <a href="https://wa.link/z9ui14" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all">VAMOS CRIAR JUNTOS</a>
                         </div>
                     </div>
                     <div class="relative">
-                        <!-- CAIXA DE CÓDIGO COM EFEITO data-aos="zoom-in" (Fundo para Frente) -->
                         <div class="relative bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-3xl p-8 backdrop-blur-sm border border-cyan-500/30 shadow-2xl shadow-cyan-500/20" data-aos="zoom-in" data-aos-delay="300">
                             <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full opacity-50 blur-xl"></div>
                             <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full opacity-50 blur-xl"></div>
@@ -69,13 +77,12 @@
                                     <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
                                     <div class="w-3 h-3 rounded-full bg-green-500"></div>
                                 </div>
-                                <div class="space-y-3 font-mono text-sm">
-                                    <div class="text-cyan-400">const <span class="text-white">developer</span> = {</div>
-                                    <div class="pl-4 text-purple-400">name: <span class="text-green-400">'CodeForge'</span>,</div>
-                                    <div class="pl-4 text-purple-400">skills: <span class="text-yellow-400">['React', 'Node', 'Design']</span>,</div>
-                                    <div class="pl-4 text-purple-400">passion: <span class="text-green-400">'Creating Amazing Web'</span></div>
-                                    <div class="text-cyan-400">}</div>
+                                
+                                <div class="min-w-[300px] min-h-[140px] md:min-w-[400px]">
+                                    <div class="font-mono text-sm" id="typed-code-container">
+                                        </div>
                                 </div>
+                                
                                 <div class="mt-6 flex justify-center">
                                     <div class="w-32 h-32 rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 animate-spin-slow flex items-center justify-center">
                                         <div class="w-28 h-28 rounded-full bg-slate-900 flex items-center justify-center">
@@ -217,11 +224,8 @@
                         <p class="text-xl text-gray-300">Pronto para transformar suas ideias em realidade?</p>
                     </div>
                     <div class="bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-3xl p-8 md:p-12 border border-cyan-500/20 backdrop-blur-sm">
-                        <!-- FORMULÁRIO FUNCIONAL CONFIGURADO PARA rafaelsoaresgw@gmail.com -->
                         <form class="space-y-6" action="https://formsubmit.co/rafaelsoaresgw@gmail.com" method="POST">
                             
-                            <!-- Campos ocultos necessários para Formsubmit -->
-                            <!-- REDIRECIONAMENTO PARA O SEU SITE COM PARAMETRO DE SUCESSO -->
                             <input type="hidden" name="_next" value="https://rafaelsoaresgw.github.io/potfolio_1/?success=true">
                             <input type="hidden" name="_captcha" value="false">
                             
@@ -247,7 +251,7 @@
                         </form>
                     </div>
                     <div class="mt-12 text-center text-gray-400">
-                        <p>© 2025 CodeForge. Todos os direitos reservados.</p>
+                        <p>© 2025 RSO DIGITAL. Todos os direitos reservados.</p>
                     </div>
                 </div>
             </section>
@@ -255,7 +259,6 @@
         </div>
     </div>
 
-    <!-- Script do AOS e Inicialização -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
@@ -264,36 +267,143 @@
       });
     </script>
 
-    <!-- CÓDIGO PARA ROLAGEM SUAVE (SMOOTH SCROLL) E ALERTA DE SUCESSO -->
     <script>
-        // 1. Alerta de Sucesso
-        const urlParams = new URLSearchParams(window.location.search);
-        const successParam = urlParams.get('success');
+        document.addEventListener("DOMContentLoaded", () => {
+            // ----------------------------------------------------
+            // 1. Controle do Menu Lateral (Sidebar)
+            // ----------------------------------------------------
+            const menuToggle = document.getElementById('menu-toggle');
+            const closeMenu = document.getElementById('close-menu');
+            const sidebar = document.getElementById('sidebar');
+            const body = document.body;
 
-        if (successParam === 'true') {
-            // Exibe a mensagem de sucesso
-            alert("Mensagem enviada com sucesso! Logo entrarei em contato.");
+            function openSidebar() {
+                sidebar.classList.remove('translate-x-full');
+                body.classList.add('overflow-hidden', 'backdrop-blur-overlay');
+            }
+
+            function closeSidebar() {
+                sidebar.classList.add('translate-x-full');
+                body.classList.remove('overflow-hidden', 'backdrop-blur-overlay');
+            }
+
+            menuToggle.addEventListener('click', openSidebar);
+            closeMenu.addEventListener('click', closeSidebar);
+
+            // Corrige o blur persistente quando a tela é redimensionada para desktop
+            window.addEventListener('resize', () => {
+                // 768px é o breakpoint 'md' do Tailwind CSS
+                if (window.innerWidth >= 768) { 
+                    if (!sidebar.classList.contains('translate-x-full')) {
+                        closeSidebar();
+                    }
+                }
+            });
+
+            // ----------------------------------------------------
+            // 2. Rolagem Suave para Links de Navegação (Menu Principal e Lateral)
+            // ----------------------------------------------------
+            const smoothScrollLinks = document.querySelectorAll('.nav-link[href^="#"], .nav-link-sidebar[href^="#"]');
             
-            // Remove o parâmetro da URL para não mostrar o alerta novamente se o usuário recarregar
-            history.replaceState(null, null, window.location.pathname);
-        }
+            smoothScrollLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = anchor.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    // Se for um link do sidebar, feche-o
+                    if (anchor.classList.contains('nav-link-sidebar')) {
+                        closeSidebar();
+                    }
 
-        // 2. Rolagem Suave para Links de Navegação
-        document.querySelectorAll('.nav-link[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        const headerHeight = 72; 
+                        const targetPosition = targetElement.offsetTop - headerHeight;
 
-                // Calcular a posição de rolagem, subtraindo a altura do header fixo (aprox. 72px)
-                const headerHeight = 72; 
-                const targetPosition = targetElement.offsetTop - headerHeight;
-
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
                 });
             });
+
+
+            // ----------------------------------------------------
+            // 3. Alerta de Sucesso
+            // ----------------------------------------------------
+            const urlParams = new URLSearchParams(window.location.search);
+            const successParam = urlParams.get('success');
+
+            if (successParam === 'true') {
+                alert("Mensagem enviada com sucesso! Logo entrarei em contato.");
+                history.replaceState(null, null, window.location.pathname);
+            }
+
+            // ----------------------------------------------------
+            // 4. Efeito de Digitação (Typing Effect)
+            // ----------------------------------------------------
+            const codeContainer = document.getElementById('typed-code-container');
+            
+            // Definição do código com tags de cor e recuo
+            const codeLines = [
+                ['text-cyan-400', 'const '],
+                ['text-white', 'developer'],
+                ['text-cyan-400', ' = {', 0, true], 
+                ['text-purple-400', 'name: ', 4],
+                ['text-green-400', "'CodeForge'"],
+                ['text-purple-400', ',', 0, true],
+                ['text-purple-400', 'skills: ', 4],
+                ['text-yellow-400', "['React', 'Node', 'Design']"],
+                ['text-purple-400', ',', 0, true],
+                ['text-purple-400', 'passion: ', 4],
+                ['text-green-400', "'Creating Amazing Web'"],
+                ['text-purple-400', '', 0, true], 
+                ['text-cyan-400', '}', 0, false] 
+            ];
+
+            let lineIndex = 0;
+            let charIndex = 0;
+            let currentSpan = null;
+            const typingSpeed = 50; 
+            const lineBreakDelay = 8; 
+
+            function typeCode() {
+                if (lineIndex < codeLines.length) {
+                    const [cssClass, fullText, indent, addNewLine] = codeLines[lineIndex];
+
+                    if (charIndex === 0) {
+                        if (indent > 0) {
+                            codeContainer.insertAdjacentHTML('beforeend', '&nbsp;'.repeat(indent));
+                        }
+                        
+                        currentSpan = document.createElement('span');
+                        currentSpan.className = cssClass;
+                        codeContainer.appendChild(currentSpan);
+                    }
+
+                    if (charIndex < fullText.length) {
+                        currentSpan.textContent += fullText.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(typeCode, typingSpeed);
+                    } else {
+                        charIndex = 0;
+                        if (addNewLine) {
+                            codeContainer.appendChild(document.createElement('br'));
+                        }
+                        lineIndex++;
+                        setTimeout(typeCode, typingSpeed * lineBreakDelay); 
+                    }
+                } else {
+                    const finalCursor = document.createElement('span');
+                    finalCursor.textContent = '|'; 
+                    finalCursor.className = 'blinking-cursor'; 
+                    codeContainer.appendChild(finalCursor);
+                }
+            }
+
+            setTimeout(typeCode, 1500); 
         });
     </script>
 </body>
