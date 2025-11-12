@@ -1,37 +1,4 @@
 /*
- * ESTE É O CÓDIGO FINAL E COMPLETO PARA O styles.css.
- * Ele contém Animações + Regras Fortes para Remover o Scrollbar Nativo (Largo).
-*/
-
-/* 1. ANIMAÇÕES DE ROTAÇÃO E PULSO */
-.animate-spin-slow {
-    animation: spin 5s linear infinite;
-}
-
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.animate-pulse {
-    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        opacity: 0.5;
-    }
-    50% {
-        opacity: 0.8;
-    }
-}
-
-
-/*
  * ESTE É O CÓDIGO FINAL PARA O styles.css.
  * Ele contém Animações + Regras Fortes para REMOVER TODOS OS SCROLLBARS VÍSIVEIS.
 */
@@ -67,7 +34,6 @@
 /* 2. REMOÇÃO FORÇADA DE TODOS OS SCROLLBARS VISÍVEIS */
 
 /* Para Chrome, Safari e Edge (Webkit) */
-/* Remove a barra de rolagem visualmente em todo o documento */
 body::-webkit-scrollbar, 
 html::-webkit-scrollbar,
 .min-h-screen::-webkit-scrollbar {
@@ -96,5 +62,4 @@ body {
 /* Garante que o contêiner principal não crie sua própria barra de rolagem horizontal ou vertical */
 .min-h-screen {
     overflow: hidden; 
-    /* Nota: 'overflow-x-hidden' já estava no HTML, mas garantimos a remoção de barras duplas aqui. */
 }
