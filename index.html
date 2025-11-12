@@ -6,13 +6,13 @@
     <title>CodeForge - Desenvolvimento Web Criativo & Profissional</title>
     <meta name="description" content="Criando experiências web além da imanigação. Desenvolvimento web criativo e profissional com as melhores tecnologias." data-react-helmet="true">
 
-    <!-- Estilo Principal: Tailwind CSS CDN -->
+    <!-- 1. Estilo Principal: Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- CSS para Efeitos de Entrada (Animate On Scroll) -->
+    <!-- 2. CSS para Efeitos de Entrada (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- CSS Personalizado: Animações e Controle de Scrollbar -->
+    <!-- 3. CSS Personalizado: Animações de Rotação/Pulso (e Scrollbar invisível) -->
     <link rel="stylesheet" href="styles.css">
     
 </head>
@@ -30,11 +30,13 @@
                         <span class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">CODEFORGE</span>
                     </div>
                     <div class="hidden md:flex items-center gap-8">
-                        <button class="hover:text-cyan-400 transition-colors">HOME</button>
-                        <button class="hover:text-cyan-400 transition-colors">PORTFOLIO</button>
-                        <button class="hover:text-cyan-400 transition-colors">SERVICES</button>
-                        <button class="hover:text-cyan-400 transition-colors">ABOUT</button>
-                        <button class="inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold">HIRE ME</button>
+                        <!-- LINKS DE NAVEGAÇÃO COM ROLAGEM SUAVE -->
+                        <a href="#hero" class="hover:text-cyan-400 transition-colors nav-link">HOME</a>
+                        <a href="#portfolio" class="hover:text-cyan-400 transition-colors nav-link">PORTFOLIO</a>
+                        <a href="#services" class="hover:text-cyan-400 transition-colors nav-link">SERVICES</a>
+                        <a href="#contact" class="hover:text-cyan-400 transition-colors nav-link">ABOUT</a>
+                        <!-- BOTÃO HIRE ME APONTA PARA CONTATO -->
+                        <a href="#contact" class="inline-flex items-center justify-center text-sm ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-2 rounded-full font-semibold nav-link">HIRE ME</a>
                     </div>
                     <button class="md:hidden text-cyan-400">
                         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
@@ -52,11 +54,12 @@
                         <h1 class="text-5xl md:text-6xl font-bold leading-tight">CRIANDO EXPERIÊNCIAS WEB <span class="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">ALÉM DA IMANIGAÇÃO</span></h1>
                         <p class="text-xl text-gray-300">Desenvolvimento Web Criativo &amp; Profissional</p>
                         <div>
-                            <button class="inline-flex items-center justify-center ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all">VAMOS CRIAR JUNTOS</button>
+                            <!-- LINK VAMOS CRIAR JUNTOS AGORA APONTA PARA O NOVO LINK DO WHATSAPP -->
+                            <a href="https://wa.link/z9ui14" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary hover:bg-primary/90 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-6 rounded-full text-lg font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/70 transition-all">VAMOS CRIAR JUNTOS</a>
                         </div>
                     </div>
                     <div class="relative">
-                        <!-- EFEITO ATUALIZADO: Fundo para Frente (zoom-in) -->
+                        <!-- CAIXA DE CÓDIGO COM EFEITO data-aos="zoom-in" (Fundo para Frente) -->
                         <div class="relative bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-3xl p-8 backdrop-blur-sm border border-cyan-500/30 shadow-2xl shadow-cyan-500/20" data-aos="zoom-in" data-aos-delay="300">
                             <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full opacity-50 blur-xl"></div>
                             <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full opacity-50 blur-xl"></div>
@@ -118,7 +121,7 @@
                             </div>
                             <div class="p-6">
                                 <h3 class="text-xl font-bold mb-2 group-hover:text-cyan-400 transition-colors">MAIS INTERATIVO</h3>
-                                <p class="text-gray-400 text-sm">Experiência visual imersiva e criativa</p>
+                                <p class="text-gray-400 text-sm">Experiências visuais memoráveis e funcionais</p>
                             </div>
                             <div class="absolute top-4 right-4 w-12 h-12 bg-cyan-500/20 rounded-full backdrop-blur-sm border border-cyan-500/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cyan-400"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" x2="21" y1="14" y2="3"></line></svg>
@@ -261,8 +264,9 @@
       });
     </script>
 
-    <!-- CÓDIGO FINAL: Alerta de Sucesso -->
+    <!-- CÓDIGO PARA ROLAGEM SUAVE (SMOOTH SCROLL) E ALERTA DE SUCESSO -->
     <script>
+        // 1. Alerta de Sucesso
         const urlParams = new URLSearchParams(window.location.search);
         const successParam = urlParams.get('success');
 
@@ -273,6 +277,24 @@
             // Remove o parâmetro da URL para não mostrar o alerta novamente se o usuário recarregar
             history.replaceState(null, null, window.location.pathname);
         }
+
+        // 2. Rolagem Suave para Links de Navegação
+        document.querySelectorAll('.nav-link[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                // Calcular a posição de rolagem, subtraindo a altura do header fixo (aprox. 72px)
+                const headerHeight = 72; 
+                const targetPosition = targetElement.offsetTop - headerHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
